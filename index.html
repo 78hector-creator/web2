@@ -1,0 +1,277 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para Montar Calculadora en GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .step {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .button {
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        .button:hover {
+            background-color: #0b7dda;
+        }
+        .tip {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guía para Montar tu Calculadora en GitHub</h1>
+    
+    <div class="tip">
+        <strong>💡 Nota:</strong> Esta guía te ayudará a subir tu calculadora a GitHub para que cualquiera pueda acceder a ella.
+    </div>
+
+    <div class="step">
+        <h2>📌 Paso 1: Preparar tu archivo HTML</h2>
+        <p>Guarda el código de tu calculadora en un archivo llamado <code>calculadora.html</code>.</p>
+        <p>Si aún no lo tienes, puedes copiar el código de la calculadora desde aquí:</p>
+        <button class="button" onclick="copyCalculatorCode()">Copiar Código de Calculadora</button>
+    </div>
+
+    <div class="step">
+        <h2>📌 Paso 2: Crear una cuenta en GitHub (si no tienes una)</h2>
+        <ol>
+            <li>Ve a <a href="https://github.com/" target="_blank">github.com</a></li>
+            <li>Haz clic en "Sign up"</li>
+            <li>Sigue las instrucciones para crear tu cuenta</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>📌 Paso 3: Crear un nuevo repositorio</h2>
+        <ol>
+            <li>Inicia sesión en GitHub</li>
+            <li>Haz clic en el botón "+" en la esquina superior derecha y selecciona "New repository"</li>
+            <li>Asigna un nombre a tu repositorio (ej: <code>mi-calculadora</code>)</li>
+            <li>Opcional: Agrega una descripción</li>
+            <li>Selecciona "Public" (público)</li>
+            <li>Marca la casilla "Initialize this repository with a README"</li>
+            <li>Haz clic en "Create repository"</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>📌 Paso 4: Subir tu archivo HTML</h2>
+        <ol>
+            <li>En tu nuevo repositorio, haz clic en "Add file" → "Upload files"</li>
+            <li>Arrastra y suelta tu archivo <code>calculadora.html</code> o haz clic en "choose your files" para seleccionarlo</li>
+            <li>En la parte inferior, escribe un mensaje de commit como "Añadir calculadora HTML"</li>
+            <li>Haz clic en "Commit changes"</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>📌 Paso 5: Activar GitHub Pages (para ver tu calculadora en línea)</h2>
+        <ol>
+            <li>En tu repositorio, haz clic en "Settings"</li>
+            <li>En el menú lateral, haz clic en "Pages"</li>
+            <li>En "Source", selecciona la rama "main" (o "master")</li>
+            <li>En "Folder", selecciona "/" (raíz)</li>
+            <li>Haz clic en "Save"</li>
+            <li>Espera unos minutos y tu calculadora estará disponible en: <code>https://[tu-usuario].github.io/[nombre-del-repositorio]/calculadora.html</code></li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>📌 Paso 6: Acceder a tu calculadora</h2>
+        <p>Una vez que GitHub Pages esté activado, podrás acceder a tu calculadora en:</p>
+        <pre>https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/calculadora.html</pre>
+        <p>¡Comparte este enlace con quien quieras!</p>
+    </div>
+
+    <div class="tip">
+        <h3>✨ Consejos adicionales:</h3>
+        <ul>
+            <li>Puedes renombrar tu archivo a <code>index.html</code> para que se cargue automáticamente sin necesidad de escribir el nombre del archivo en la URL.</li>
+            <li>Si quieres personalizar tu calculadora, edita el archivo HTML y vuelve a subirlo siguiendo el Paso 4.</li>
+            <li>GitHub Pages puede tardar unos minutos en actualizar los cambios.</li>
+        </ul>
+    </div>
+
+    <script>
+        function copyCalculatorCode() {
+            const calculatorCode = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 320px;
+            width: 100%;
+        }
+        .display {
+            width: 100%;
+            height: 60px;
+            font-size: 2em;
+            text-align: right;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        button {
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #e0e0e0;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #d0d0d0;
+        }
+        .operator {
+            background-color: #ff9800;
+            color: white;
+        }
+        .operator:hover {
+            background-color: #e68900;
+        }
+        .equals {
+            background-color: #4caf50;
+            color: white;
+        }
+        .equals:hover {
+            background-color: #3e8e41;
+        }
+        .clear {
+            background-color: #f44336;
+            color: white;
+        }
+        .clear:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora</h2>
+        <input type="text" class="display" id="display" disabled>
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+            <button class="operator" onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+            <button class="operator" onclick="backspace()">⌫</button>
+        </div>
+    </div>
+
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculate() {
+            try {
+                const result = eval(document.getElementById('display').value);
+                document.getElementById('display').value = result;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+
+        function backspace() {
+            const display = document.getElementById('display');
+            display.value = display.value.slice(0, -1);
+        }
+    <\/script>
+</body>
+</html>`;
+
+            navigator.clipboard.writeText(calculatorCode).then(() => {
+                alert('¡Código de la calculadora copiado al portapapeles!');
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+                alert('Error al copiar el código. Por favor, selecciónalo manualmente.');
+            });
+        }
+    </script>
+</body>
+</html>
+```
